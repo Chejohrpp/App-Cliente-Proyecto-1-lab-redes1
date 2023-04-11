@@ -2,4 +2,19 @@
     <string name="app_name">Redes1AppCliente</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Ver Trama</string>
+    <string name="previous">Regresar</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="scroll_view_test">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ornare faucibus felis, ut pulvinar magna dignissim sed. Nulla facilisi. Curabitur pulvinar ante vel ante posuere ullamcorper. Integer in lacinia purus. Mauris congue velit id diam consequat dapibus. Fusce bibendum tortor ut lorem congue, id tempor elit imperdiet. Vivamus porttitor purus quis libero facilisis, sit amet egestas ante molestie. Sed vitae sollicitudin ipsum, in feugiat orci. Suspendisse consectetur suscipit tristique. Suspendisse bibendum ullamcorper massa, ut elementum orci tincidunt a. Donec ut sagittis sapien. Proin dignissim tortor mauris, sit amet aliquam ex cursus quis. Sed vel purus nec sapien venenatis lobortis. Nunc ultricies augue id sem fringilla, eu elementum lorem sollicitudin.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ornare faucibus felis, ut pulvinar magna dignissim sed. Nulla facilisi. Curabitur pulvinar ante vel ante posuere ullamcorper. Integer in lacinia purus. Mauris congue velit id diam consequat dapibus. Fusce bibendum tortor ut lorem congue, id tempor elit imperdiet. Vivamus porttitor purus quis libero facilisis, sit amet egestas ante molestie. Sed vitae sollicitudin ipsum, in feugiat orci. Suspendisse consectetur suscipit tristique. Suspendisse bibendum ullamcorper massa, ut elementum orci tincidunt a. Donec ut sagittis sapien. Proin dignissim tortor mauris, sit amet aliquam ex cursus quis. Sed vel purus nec sapien venenatis lobortis. Nunc ultricies augue id sem fringilla, eu elementum lorem sollicitudin.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ornare faucibus felis, ut pulvinar magna dignissim sed. Nulla facilisi. Curabitur pulvinar ante vel ante posuere ullamcorper. Integer in lacinia purus. Mauris congue velit id diam consequat dapibus. Fusce bibendum tortor ut lorem congue, id tempor elit imperdiet. Vivamus porttitor purus quis libero facilisis, sit amet egestas ante molestie. Sed vitae sollicitudin ipsum, in feugiat orci. Suspendisse consectetur suscipit tristique. Suspendisse bibendum ullamcorper massa, ut elementum orci tincidunt a. Donec ut sagittis sapien. Proin dignissim tortor mauris, sit amet aliquam ex cursus quis. Sed vel purus nec sapien venenatis lobortis. Nunc ultricies augue id sem fringilla, eu elementum lorem sollicitudin.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ornare faucibus felis, ut pulvinar magna dignissim sed. Nulla facilisi. Curabitur pulvinar ante vel ante posuere ullamcorper. Integer in lacinia purus. Mauris congue velit id diam consequat dapibus. Fusce bibendum tortor ut lorem congue, id tempor elit imperdiet. Vivamus porttitor purus quis libero facilisis, sit amet egestas ante molestie. Sed vitae sollicitudin ipsum, in feugiat orci. Suspendisse consectetur suscipit tristique. Suspendisse bibendum ullamcorper massa, ut elementum orci tincidunt a. Donec ut sagittis sapien. Proin dignissim tortor mauris, sit amet aliquam ex cursus quis. Sed vel purus nec sapien venenatis lobortis. Nunc ultricies augue id sem fringilla, eu elementum lorem sollicitudin.
+        xd
+    </string>
 </resources>
