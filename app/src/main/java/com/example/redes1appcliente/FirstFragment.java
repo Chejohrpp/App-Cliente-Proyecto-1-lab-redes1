@@ -1,5 +1,7 @@
 package com.example.redes1appcliente;
 
+import static com.example.redes1appcliente.logic.RandomMacAddressGenerator.generateRandomMacAddress;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,10 +24,6 @@ import java.net.InetAddress;
 public class FirstFragment extends Fragment {
 
     private FragmentFirstBinding binding;
-
-    private EditText editTextOrigen, editTextDestino, editTextDatos;
-    private Button buttonConectar, buttonDesconectar, buttonEnviar;
-    private TextView textViewLog;
     private ClienteConnect cliente;
     public FirstFragment() {
     }
@@ -35,8 +33,10 @@ public class FirstFragment extends Fragment {
             LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
-        cliente = new ClienteConnect("");
+        String randomMacAddress = generateRandomMacAddress();
+        cliente = new ClienteConnect(randomMacAddress);
         binding = FragmentFirstBinding.inflate(inflater, container, false);
+        binding.macAddressField.setText(randomMacAddress);
         return binding.getRoot();
     }
 
@@ -56,14 +56,14 @@ public class FirstFragment extends Fragment {
             public void onClick(View view) {
                 String mensaje = binding.messageField.getText().toString();
                 System.out.println(mensaje);
+                showMessageScreen("Tu: " + mensaje);
                 try {
                     new Thread(new Runnable() {
                         @Override
                         public void run() {
                             try {
                                 String respuesta = cliente.sendMessage(mensaje);
-                                binding.chatTextView.setText(binding.chatTextView.getText().toString()  + "\n" +  respuesta);
-                                //binding.messageField.setText("");
+                                showMessageScreen(respuesta);
                             } catch (Exception e) {
                                 e.printStackTrace();
                             }
@@ -80,8 +80,9 @@ public class FirstFragment extends Fragment {
             public void onClick(View view) {
                 try {
                     String macAddress = binding.macAddressField.getText().toString();
-                    cliente.setMacAddress(macAddress);
-                    System.out.println(macAddress);
+                    String respuesta = cliente.setMacAddress(macAddress);
+                    showMessageScreen(respuesta);
+                    System.out.println(respuesta);
                 } catch (Exception e) {
                     throw new RuntimeException(e);
                 }
@@ -96,7 +97,8 @@ public class FirstFragment extends Fragment {
                         @Override
                         public void run() {
                             try {
-                                cliente.disconnect();
+                                String respuesta = cliente.disconnect();
+                                showMessageScreen(respuesta);
                             } catch (Exception e) {
                                 e.printStackTrace();
                             }
@@ -116,8 +118,10 @@ public class FirstFragment extends Fragment {
                         @Override
                         public void run() {
                             try {
-                                cliente.connect();
+                                String respuesta = cliente.connect();
+                                showMessageScreen(respuesta);
                             } catch (Exception e) {
+                                //showMessageScreen("No se pudo conectar con el servidor");
                                 e.printStackTrace();
                             }
                         }
@@ -128,6 +132,15 @@ public class FirstFragment extends Fragment {
             }
         });
 
+    }
+
+    private void showMessageScreen(String mensaje){
+        binding.chatTextView.post(new Runnable() {
+            @Override
+            public void run() {
+                binding.chatTextView.setText(binding.chatTextView.getText().toString()  + "\n" +  mensaje);
+            }
+        });
     }
 
     @Override
